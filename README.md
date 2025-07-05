@@ -3,7 +3,7 @@
 
 
 
-# Youth Tobacco Survey SQL Project
+# Youth Tobacco Survey
 
 This project analyzes data from a comprehensive survey on youth tobacco usage across Indian states. It leverages a wide range of SQL queries to uncover insights into smoking habits, awareness, policy enforcement, and tobacco product exposure.
 
