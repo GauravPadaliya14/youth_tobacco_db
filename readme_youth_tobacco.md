@@ -1,3 +1,8 @@
+
+![tobacco](https://github.com/user-attachments/assets/5af56ac8-7c6a-48d2-a4d0-3543d8d2bf91)
+
+
+
 # Youth Tobacco Survey SQL Project
 
 This project analyzes data from a comprehensive survey on youth tobacco usage across Indian states. It leverages a wide range of SQL queries to uncover insights into smoking habits, awareness, policy enforcement, and tobacco product exposure.
