@@ -132,30 +132,8 @@ ORDER BY (ban_indoor + ban_outdoor) DESC LIMIT 5;
 
 ---
 
-## 📈 Project Potential
+🔚 Conclusion
 
-- Integrate with **Tableau/Power BI** for interactive dashboards
-- Use data storytelling to show **impact of education, awareness, and enforcement**
-- Deploy as a portfolio SQL project on **GitHub**
+The Youth Tobacco Survey SQL Project provides valuable insights into the patterns, awareness levels, and policy effectiveness surrounding tobacco use among Indian youth. By leveraging advanced SQL techniques such as window functions, views, and common table expressions, this project demonstrates how structured data analysis can inform public health decisions and targeted interventions. The analysis highlights key areas—such as low awareness, policy gaps, and regional disparities—that can benefit from focused educational and regulatory efforts.
 
----
-
-## ✅ Tech Used
-
-- MySQL 8.0+
-- SQL Views, CTEs, Aggregates, Filtering, Joins, Ranking Functions
-
----
-
-## 📎 License
-
-MIT License
-
----
-
-## 📬 Author
-
-*Gaurav – Aspiring Data Analyst*
-
-Feel free to fork this repo and extend it with new analysis, visualizations, or datasets.
-
+This project not only serves as a powerful data storytelling exercise but also acts as a strong portfolio piece for anyone aspiring to pursue roles in data analysis, public health analytics, or policymaking support.
