@@ -9,17 +9,17 @@ This project analyzes data from a comprehensive survey on youth tobacco usage ac
 
 ---
 
-## 📁 Database Name
+##  Database Name
 
 `youth_tobacco_db`
 
-## 📦 Table Name
+##  Table Name
 
 `youth_tobacco_survey`
 
 ---
 
-## 🧱 Table Columns Overview
+##  Table Columns Overview
 
 - `state` – Indian state name
 - `area` – Area type: Total / Urban / Rural
@@ -32,7 +32,7 @@ This project analyzes data from a comprehensive survey on youth tobacco usage ac
 
 ---
 
-## 🧪 Sample Queries and Insights
+##  Sample Queries and Insights
 
 ### 1. **Top 5 States by Current Tobacco Use**
 
@@ -41,7 +41,7 @@ SELECT state, area, curr_tob_use FROM youth_tobacco_survey
 WHERE area = 'Total' ORDER BY curr_tob_use DESC LIMIT 5;
 ```
 
-> 🔍 *Identifies regions with highest youth tobacco use for targeted intervention.*
+>  *Identifies regions with highest youth tobacco use for targeted intervention.*
 
 ### 2. **Average Tobacco Use by Area**
 
@@ -49,7 +49,7 @@ WHERE area = 'Total' ORDER BY curr_tob_use DESC LIMIT 5;
 SELECT area, AVG(curr_tob_use), AVG(ever_tob_use) FROM youth_tobacco_survey GROUP BY area;
 ```
 
-> 📊 *Compares usage across Urban vs Rural vs Total populations.*
+>  *Compares usage across Urban vs Rural vs Total populations.*
 
 ### 3. **Low E-Cigarette Awareness States**
 
@@ -57,7 +57,7 @@ SELECT area, AVG(curr_tob_use), AVG(ever_tob_use) FROM youth_tobacco_survey GROU
 SELECT state, e_cig_aware FROM youth_tobacco_survey WHERE area = 'Total' AND e_cig_aware < 20;
 ```
 
-> ⚠️ *Pinpoints states needing awareness campaigns.*
+> ⚠ *Pinpoints states needing awareness campaigns.*
 
 ### 4. **Correlation: Education vs Usage**
 
@@ -65,7 +65,7 @@ SELECT state, e_cig_aware FROM youth_tobacco_survey WHERE area = 'Total' AND e_c
 SELECT state, curr_tob_use, taught_tob_effects FROM youth_tobacco_survey WHERE area = 'Total';
 ```
 
-> 🎓 *Explores whether anti-tobacco education influences behavior.*
+>  *Explores whether anti-tobacco education influences behavior.*
 
 ### 5. **Above-Average Tobacco Use**
 
@@ -76,7 +76,7 @@ SELECT state, curr_tob_use FROM youth_tobacco_survey, avg_use
 WHERE area = 'Total' AND curr_tob_use > avg_curr;
 ```
 
-> 🧠 *Highlights states with usage above national average.*
+>  *Highlights states with usage above national average.*
 
 ### 6. **Create View: Smoking Stats**
 
@@ -85,7 +85,7 @@ CREATE VIEW smoking_stats AS
 SELECT state, area, ever_smoke, curr_smoke, age_init_cig FROM youth_tobacco_survey;
 ```
 
-> 🗃️ *Reusable summary view for smoking-focused analysis.*
+> 🗃 *Reusable summary view for smoking-focused analysis.*
 
 ### 7. **Rank States by Tobacco Use (Window Function)**
 
@@ -95,7 +95,7 @@ RANK() OVER (PARTITION BY area ORDER BY curr_tob_use DESC) AS rank_in_area
 FROM youth_tobacco_survey;
 ```
 
-> 🏆 *Ranks each state within its area group.*
+>  *Ranks each state within its area group.*
 
 ### 8. **Desire to Quit Smoking > 30%**
 
@@ -103,7 +103,7 @@ FROM youth_tobacco_survey;
 SELECT state, wantquit_smoke FROM youth_tobacco_survey WHERE wantquit_smoke > 30;
 ```
 
-> ❤️ *Shows positive intent to quit among youth.*
+> ❤ *Shows positive intent to quit among youth.*
 
 ### 9. **Difference: Ever vs Current Tobacco Use**
 
@@ -111,7 +111,7 @@ SELECT state, wantquit_smoke FROM youth_tobacco_survey WHERE wantquit_smoke > 30
 SELECT state, (ever_tob_use - curr_tob_use) AS diff FROM youth_tobacco_survey;
 ```
 
-> 📉 *Reveals drop-off in continued usage — potential for prevention.*
+>  *Reveals drop-off in continued usage — potential for prevention.*
 
 ### 10. **Distribution Channels**
 
@@ -119,7 +119,7 @@ SELECT state, (ever_tob_use - curr_tob_use) AS diff FROM youth_tobacco_survey;
 SELECT state, source_cig_store, source_bidi_store FROM youth_tobacco_survey;
 ```
 
-> 🛒 *Understand common purchase points of tobacco.*
+>  *Understand common purchase points of tobacco.*
 
 ### 11. **Strictest Ban States**
 
@@ -128,11 +128,11 @@ SELECT state, ban_indoor, ban_outdoor FROM youth_tobacco_survey
 ORDER BY (ban_indoor + ban_outdoor) DESC LIMIT 5;
 ```
 
-> 🛑 *Recognizes states with highest policy enforcement.*
+>  *Recognizes states with highest policy enforcement.*
 
 ---
 
-🔚 Conclusion
+ Conclusion
 
 The Youth Tobacco Survey SQL Project provides valuable insights into the patterns, awareness levels, and policy effectiveness surrounding tobacco use among Indian youth. By leveraging advanced SQL techniques such as window functions, views, and common table expressions, this project demonstrates how structured data analysis can inform public health decisions and targeted interventions. The analysis highlights key areas—such as low awareness, policy gaps, and regional disparities—that can benefit from focused educational and regulatory efforts.
 
